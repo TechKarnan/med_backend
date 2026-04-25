@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/health", (req, res) => {
+    console.log("Health check endpoint called");
   res.json({ status: "UP", time: new Date() });
 });
 
