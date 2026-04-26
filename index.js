@@ -5,6 +5,17 @@ const axios = require("axios");
 
 const app = express();
 
+import cors from "cors";
+
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://stately-marshmallow-73554c.netlify.app/" // later for prod
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 // Create DB pool
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
