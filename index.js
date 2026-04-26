@@ -10,7 +10,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://stately-marshmallow-73554c.netlify.app/" // later for prod
+    "https://med-backend-r8bj.onrender.com" // later for prod
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
